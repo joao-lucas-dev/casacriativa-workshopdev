@@ -1,26 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
 body {
   background: #e5e5e5;
   color: #25282b;
-  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: #ff5eb4;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p, .description {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+#container {
+  width: 90%;
+  max-width: 980px;
+  margin: 40px auto;
+  display: flex;
+}
+
+#intro {
+  width: 300px;
+  margin-right: 20px;
+}
+
+#buttons {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+main {
+  margin: 32px 0;
+}
+
+main p {
+  margin: 15px;
 }
 
 button {
+  background: none;
   color: #ff5eb4;
   border: none;
-  font-weight: bold; 
-  background: none;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 0.1px; 
+  cursor: pointer;
+}
+
+button:hover {
+  text-decoration: underline;
 }
 
 button.fat {
   background: #ff5eb4;
   color: #fff;
+  width: 150px;
+  height: 40px;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px #ff5e8432;
 }
 
-#footer a {
+button.fat:hover {
   text-decoration: none;
-  color: #25282b;
 }
 
-.hide {
-  display: none;
+footer {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #777
+}
+
+footer a {
+  opacity: 0.8;
+}
+
+.idea {
+  display: flex;
+  margin-bottom: 32px;
+  background: #fff;
+  padding: 32px;
+  border-radius:  8px;
+  box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.1);
+}
+
+.idea img {
+  width: 60px;
+  height: 60px;
+  margin-right: 32px;
+}
+
+.idea p {
+  margin: 8px 0;
+  color: #777;
+}
+
+.idea .description {
+  margin: 16px 0;
+}
+
+#modal {
+  position: absolute;
+  background: #ff5eb4;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 400ms;
+}
+
+#modal .content {
+  color: #fff;
+}
+
+#modal .content h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#modal form {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5) {
+  grid-column: span 2;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius:  6px;
+  border: 1px solid rgba(141, 25, 52, 0.5);
+  font-size: 16px;
+}
+
+form label {
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0.8px;
+}
+
+form a {
+  width: 150px;
+  height: 40px;
+  background: #ffffff22;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: end;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 400ms;
+}
+
+form a:hover {
+  width: 150px;
+  height: 40px;
+  background: #fff;
+  color: #ff5eb4;
+  text-decoration: none;
+}
+
+form button {
+  background: #fff;
+  width: 150px;
+  height: 40px;
+  border-radius: 6px;
+  grid-column: 2;
+  justify-self: end;
+  margin-top: 32px;
+  transition: 400ms;
+}
+
+form button:hover {
+  background: #0984e3;
+  color: #fff;
+  text-decoration: none;
+}
+
+#modal.hide {
+  opacity: 0;
+  visibility: hidden;
 }
