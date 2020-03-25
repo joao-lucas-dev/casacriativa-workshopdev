@@ -1,3 +1,5 @@
+
+/* Global */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +13,29 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+body.hideScroll {
+  overflow: hidden;
+}
+
+.button {
+  background: #ff5eb4;
+  color: #fff;
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px #ff5e8432;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background: #0984e3;
+  text-decoration: none;
+}
+
 a {
   color: #ff5eb4;
   font-weight: bold;
@@ -20,6 +45,8 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* Padrão */
 
 p, .description {
   font-size: 16px;
@@ -36,7 +63,7 @@ p, .description {
 
 #intro {
   width: 300px;
-  margin-right: 20px;
+  margin-right: 64px;
 }
 
 #buttons {
@@ -66,19 +93,6 @@ button {
 
 button:hover {
   text-decoration: underline;
-}
-
-button.fat {
-  background: #ff5eb4;
-  color: #fff;
-  width: 150px;
-  height: 40px;
-  border-radius: 6px;
-  box-shadow: 0 8px 16px #ff5e8432;
-}
-
-button.fat:hover {
-  text-decoration: none;
 }
 
 footer {
@@ -122,12 +136,17 @@ footer a {
   position: absolute;
   background: #ff5eb4;
   top: 0;
-  width: 100vw;
-  height: 100vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 400ms;
+}
+
+#modal.addScroll {
+  overflow: auto;
 }
 
 #modal .content {
@@ -211,3 +230,66 @@ form button:hover {
   opacity: 0;
   visibility: hidden;
 }
+
+/* ideas.html */
+#page-ideas #container {
+  display: block;
+}
+
+#page-ideas header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#page-ideas nav {
+  display: flex;
+  align-items: center;
+}
+
+#page-ideas nav li {
+  list-style-type: none;
+  margin-right: 16px;
+  color: #25282b;
+}
+
+#page-ideas nav li a {
+  color: #25282b;
+}
+
+#page-ideas nav li a.button {
+  color: #fff;
+}
+
+#page-ideas nav li:last-child {
+  margin: 0;
+}
+
+section#title {
+  text-align: center;
+}
+
+section#title p {
+  opacity: 0.7;
+  margin: 0;
+}
+
+section#title h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+section#ideas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+section#ideas .idea {
+  margin: 0;
+}
+
+section#title, 
+section#ideas, 
+footer {
+  margin-top: 64px;
+} 
