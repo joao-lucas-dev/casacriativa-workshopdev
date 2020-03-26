@@ -1,0 +1,20 @@
+{
+  "name": "workshopdev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/joao-lucas-dev/casacriativa-workshopdev.git",
+  "author": "Joao Lucas <jlmelosouza18@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "sucrase": "^3.12.1"
+  }
+}
