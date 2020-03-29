@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img alt="Mockup" src="mockup">
+  <img alt="Mockup" src="mockup.png">
 </p>
 
 <br>
